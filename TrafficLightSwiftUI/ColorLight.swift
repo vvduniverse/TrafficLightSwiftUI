@@ -13,6 +13,7 @@ struct ColorLight: View {
     var body: some View {
         Circle()
             .foregroundColor(color)
+            .opacity(0.3)
             .frame(width: UIScreen.screenWidth, height: UIScreen.screenWidth)
     }
 }
