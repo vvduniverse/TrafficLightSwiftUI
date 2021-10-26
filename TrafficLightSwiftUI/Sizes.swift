@@ -12,8 +12,8 @@ enum Light {
 }
 
 extension UIScreen{
-    static let screenWidth = UIScreen.main.bounds.size.width  / 2.5
+    static let screenWidth = UIScreen.main.bounds.size.width  / 2.6
     static let screenHeight = UIScreen.main.bounds.size.height / 1.6
     static let buttonSize = UIScreen.main.bounds.size.height / 13
-    static let offsetSize = UIScreen.main.bounds.size.height / 20
+    
 }

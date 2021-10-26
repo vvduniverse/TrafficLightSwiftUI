@@ -7,40 +7,78 @@
 
 import SwiftUI
 
-//enum Light {
-//    case red, yellow, green
-//}
-
 struct ContentView: View {
     
     @State private var startButton = true
-//    private var currentColor = Light.red
-//    private var lightIsOn = 1.0
-//    private var lightIsOff = 0.3
+    @State private var redColorOpacity = 0.3
+    @State private var yellowColorOpacity = 0.3
+    @State private var greenColorOpacity = 0.3
+    @State private var currentColor = Light.red
     
-    var body: some View {
-        VStack {
-//            TrafficLight(lightColor: .red, opacity: lightIsOn)
-            TrafficLight()
-                .offset(y: UIScreen.offsetSize)
-            Spacer()
-            Button(action: {
-                self.startButton = false;
-                
-                
-            }, label: {
-                self.startButton ? Text("START") : Text("NEXT")
-            })
-            .buttonStyle()
+    
+    
+    private func changeColor() {
+        
+        let lightIsOn = 1.0
+        let lightIsOff = 0.3
+        
+        switch currentColor {
+        
+        case .red:
+            redColorOpacity = lightIsOn
+            greenColorOpacity = lightIsOff
+            currentColor = .yellow
+        case .yellow:
+            redColorOpacity = lightIsOff
+            yellowColorOpacity = lightIsOn
+            currentColor = .green
+        case .green:
+            yellowColorOpacity = lightIsOff
+            greenColorOpacity = lightIsOn
+            currentColor = .red
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.black)
-        .ignoresSafeArea()
     }
+    
+    
+    
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+extension ContentView {
+    
+    var body: some View {
+        ZStack {
+            
+            Color(.black)
+                .ignoresSafeArea()
+            VStack {
+                VStack {
+                    ColorLight(color: .red, alpha: redColorOpacity)
+                    Spacer()
+                    ColorLight(color: .yellow, alpha: yellowColorOpacity)
+                    Spacer()
+                    ColorLight(color: .green, alpha: greenColorOpacity)
+                }
+                .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
+                
+                Spacer()
+                Button(action: {
+                    self.startButton = false;
+                    changeColor()
+                    
+                }, label: {
+                    self.startButton ? Text("START") : Text("NEXT")
+                })
+                .buttonStyle()
+            }
+        }
+    }
+    
 }
