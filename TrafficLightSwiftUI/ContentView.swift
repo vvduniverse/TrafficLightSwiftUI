@@ -15,15 +15,12 @@ struct ContentView: View {
     @State private var greenColorOpacity = 0.3
     @State private var currentColor = Light.red
     
-    
-    
     private func changeColor() {
         
         let lightIsOn = 1.0
         let lightIsOff = 0.3
         
-        switch currentColor {
-        
+        switch currentColor {      
         case .red:
             redColorOpacity = lightIsOn
             greenColorOpacity = lightIsOff
@@ -38,11 +35,6 @@ struct ContentView: View {
             currentColor = .red
         }
     }
-    
-    
-    
-    
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -55,7 +47,6 @@ extension ContentView {
     
     var body: some View {
         ZStack {
-            
             Color(.black)
                 .ignoresSafeArea()
             VStack {
@@ -67,18 +58,17 @@ extension ContentView {
                     ColorLight(color: .green, alpha: greenColorOpacity)
                 }
                 .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
+                .offset(y: UIScreen.screenOffset)
                 
                 Spacer()
                 Button(action: {
                     self.startButton = false;
                     changeColor()
-                    
                 }, label: {
                     self.startButton ? Text("START") : Text("NEXT")
                 })
                 .buttonStyle()
             }
         }
-    }
-    
+    }   
 }

@@ -13,7 +13,8 @@ struct CustomButton: ViewModifier {
             .frame(width: UIScreen.screenWidth, height: UIScreen.buttonSize)
             .foregroundColor(.white)
             .background(Color.blue)
-            .clipShape(Capsule())
+            .clipShape(RoundedRectangle(cornerRadius: 16))
+            .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.white, lineWidth: 2))
             .padding()
     }
 }

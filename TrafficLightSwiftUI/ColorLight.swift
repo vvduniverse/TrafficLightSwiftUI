@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct ColorLight: View {
+    
     let color: Color
     let alpha: Double
     let screenWidth = UIScreen.main.bounds.width
+    
     var body: some View {
         Circle()
             .foregroundColor(color)
             .opacity(alpha)
             .frame(width: UIScreen.screenWidth, height: UIScreen.screenWidth)
+            .overlay(Circle().stroke(Color.white, lineWidth: 3)
+            )
     }
 }
 
