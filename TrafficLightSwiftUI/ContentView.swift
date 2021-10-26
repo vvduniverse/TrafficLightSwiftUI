@@ -7,19 +7,20 @@
 
 import SwiftUI
 
+
+
 struct ContentView: View {
+    
+    @State private var startButton = true
+    
     var body: some View {
         VStack {
             TrafficLight()
             Spacer()
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                Text("START")
+            Button(action: { self.startButton = false }, label: {
+                self.startButton ? Text("START") : Text("NEXT")
             })
-            .font(.title)
-            .frame(width: 150, height: 60)
-            .foregroundColor(.white)
-            .background(Color.blue)
-            .clipShape(Capsule())
+            .buttonStyle()
         }
     }
 }
