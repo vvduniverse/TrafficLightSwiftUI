@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ColorLight: View {
     let color: Color
+    let screenWidth = UIScreen.main.bounds.width
     var body: some View {
         Circle()
             .foregroundColor(color)
-            .frame(width: 150, height: 150)
-        
+            .frame(width: UIScreen.screenWidth, height: UIScreen.screenWidth)
     }
 }
 

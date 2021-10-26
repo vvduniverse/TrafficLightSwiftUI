@@ -18,7 +18,7 @@ struct TrafficLight: View {
         }
         .padding()
         .background(Color.black)
-        .frame(width: 150, height: 500)
+        .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
     }
 }
 

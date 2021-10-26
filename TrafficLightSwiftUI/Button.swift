@@ -10,10 +10,11 @@ struct CustomButton: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.title)
-            .frame(width: 150, height: 60)
+            .frame(width: UIScreen.screenWidth, height: UIScreen.buttonSize)
             .foregroundColor(.white)
             .background(Color.blue)
             .clipShape(Capsule())
+            .padding()
     }
 }
 

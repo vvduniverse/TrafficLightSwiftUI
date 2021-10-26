@@ -14,6 +14,7 @@
 		A041D8CA2727F1F000811454 /* TrafficLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041D8C92727F1F000811454 /* TrafficLight.swift */; };
 		A041D8CC2727F1FC00811454 /* ColorLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041D8CB2727F1FC00811454 /* ColorLight.swift */; };
 		A041D8CE2727FBEB00811454 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041D8CD2727FBEB00811454 /* Button.swift */; };
+		A041D8D02728019600811454 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041D8CF2728019600811454 /* Sizes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A041D8C92727F1F000811454 /* TrafficLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLight.swift; sourceTree = "<group>"; };
 		A041D8CB2727F1FC00811454 /* ColorLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLight.swift; sourceTree = "<group>"; };
 		A041D8CD2727FBEB00811454 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		A041D8CF2728019600811454 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				A041D8BC2727EF7A00811454 /* ContentView.swift */,
 				A041D8CD2727FBEB00811454 /* Button.swift */,
 				A041D8C92727F1F000811454 /* TrafficLight.swift */,
+				A041D8CF2728019600811454 /* Sizes.swift */,
 				A041D8CB2727F1FC00811454 /* ColorLight.swift */,
 				A041D8BE2727EF7C00811454 /* Assets.xcassets */,
 				A041D8C32727EF7C00811454 /* Info.plist */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A041D8D02728019600811454 /* Sizes.swift in Sources */,
 				A041D8CE2727FBEB00811454 /* Button.swift in Sources */,
 				A041D8BD2727EF7A00811454 /* ContentView.swift in Sources */,
 				A041D8BB2727EF7A00811454 /* TrafficLightSwiftUIApp.swift in Sources */,

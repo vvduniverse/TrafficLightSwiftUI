@@ -16,12 +16,16 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TrafficLight()
+                .offset(y: UIScreen.offsetSize)
             Spacer()
             Button(action: { self.startButton = false }, label: {
                 self.startButton ? Text("START") : Text("NEXT")
             })
             .buttonStyle()
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.black)
+        .ignoresSafeArea()
     }
 }
 
