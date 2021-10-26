@@ -9,8 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            TrafficLight()
+            Spacer()
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Text("START")
+            })
+            .font(.title)
+            .frame(width: 150, height: 60)
+            .foregroundColor(.white)
+            .background(Color.blue)
+            .clipShape(Capsule())
+        }
     }
 }
 
