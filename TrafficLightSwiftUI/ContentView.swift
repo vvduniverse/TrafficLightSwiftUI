@@ -7,18 +7,28 @@
 
 import SwiftUI
 
-
+//enum Light {
+//    case red, yellow, green
+//}
 
 struct ContentView: View {
     
     @State private var startButton = true
+//    private var currentColor = Light.red
+//    private var lightIsOn = 1.0
+//    private var lightIsOff = 0.3
     
     var body: some View {
         VStack {
+//            TrafficLight(lightColor: .red, opacity: lightIsOn)
             TrafficLight()
                 .offset(y: UIScreen.offsetSize)
             Spacer()
-            Button(action: { self.startButton = false }, label: {
+            Button(action: {
+                self.startButton = false;
+                
+                
+            }, label: {
                 self.startButton ? Text("START") : Text("NEXT")
             })
             .buttonStyle()

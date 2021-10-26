@@ -9,17 +9,18 @@ import SwiftUI
 
 struct ColorLight: View {
     let color: Color
+    let alpha: Double
     let screenWidth = UIScreen.main.bounds.width
     var body: some View {
         Circle()
             .foregroundColor(color)
-            .opacity(0.3)
+            .opacity(alpha)
             .frame(width: UIScreen.screenWidth, height: UIScreen.screenWidth)
     }
 }
 
 struct ColorLight_Previews: PreviewProvider {
     static var previews: some View {
-        ColorLight(color: .blue)
+        ColorLight(color: .blue, alpha: 0.3)
     }
 }
